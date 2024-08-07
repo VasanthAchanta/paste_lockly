@@ -1,0 +1,16 @@
+<div>
+    <h2>Create a New Snippet</h2>
+    <form (ngSubmit)="onSubmit()">
+      <label for="text">Text:</label>
+      <textarea id="text" [(ngModel)]="text" name="text" required></textarea>
+      
+      <label for="key">Secret Key (optional):</label>
+      <input id="key" [(ngModel)]="key" name="key" type="password">
+      
+      <button type="submit">Create Snippet</button>
+    </form>
+  
+    <div *ngIf="url">
+      <p>Shareable URL: <a [href]="url">{{ url }}</a></p>
+    </div>
+  </div>

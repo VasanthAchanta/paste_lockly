@@ -1,0 +1,9 @@
+<div>
+    <h2>View Snippet</h2>
+    <input [(ngModel)]="key" type="password" placeholder="Enter key if required">
+    <button (click)="fetchSnippet()">View Snippet</button>
+    
+    <div *ngIf="text">
+      <p>{{ text }}</p>
+    </div>
+  </div>
